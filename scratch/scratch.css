@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ffe5e5; /* Light red background */
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Add padding to the top of the main content to prevent overlap */
+main {
+    margin-top: 60px; /* Adjust this value based on the header's height */
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+
+#about, #origin, #reasons, #economics, #locations, #resume {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Link Styles */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Top Link */
+.back-to-top {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Economics Section Styles */
+#economics {
+    text-align: center; /* Center-align content in this section */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#economics h2 {
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+#economics iframe {
+    display: inline-block; /* Ensure the video aligns properly within the centered container */
+    margin: 0 auto; /* Center the video horizontally */
+}
+
+/* Resume Section Styles */
+#resume {
+    text-align: center; /* Center-align content in this section */
+    padding: 20px;
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+}
+
+/* Button Styles */
+.resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+ /* Back to Top Button Styles */
+.back-to-top {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+}
+
+.back-to-top:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* General Styles for Centering Images */
+img {
+    display: block; /* Makes the image a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains aspect ratio */
+}

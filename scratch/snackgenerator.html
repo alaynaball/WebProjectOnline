@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader Joe's Product Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #2a9d8f;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #264653;
+        }
+        .product-recommendation {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Trader Joe's Product Recommender!</h1>
+    <p>Enter your name, age, and city to get a highly personalized product recommendation:</p>
+    
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <input type="text" id="ageInput" placeholder="Enter your age" />
+    <input type="text" id="cityInput" placeholder="Enter your city" />
+    <button onclick="recommendProduct()">Get Recommendation</button>
+
+    <div class="product-recommendation" id="recommendation"></div>
+</div>
+
+<script>
+    const products = [
+        "Everything But the Bagel Seasoning",
+        "Trader Joe's Dark Chocolate Peanut Butter Cups",
+        "Organic Mango Chunks",
+        "Cauliflower Gnocchi",
+        "Mandarin Orange Chicken",
+        "Hold the Cone! Mini Ice Cream Cones",
+        "Crispy Chickpeas",
+        "Bomba Spicy Sauce",
+        "Spinach and Cheese Stuffed Pastry",
+        "Frozen Mac and Cheese",
+        "Peanut Butter Filled Pretzels",
+        "Sweet Potato Fries",
+        "Vegetable Fried Rice",
+        "Cinnamon Schoolbook Cookies",
+        "Bagged Salad Mix",
+        "Chocolate Covered Almonds",
+        "Organic Brown Rice",
+        "Dried Mango",
+        "Chili Lime Seasoning",
+        "Mini Brie Bites",
+        "Organic Oatmeal",
+        "Almond Butter",
+        "Cucumber Rolls",
+        "Organic Hummus",
+        "Caramelized Onion Dip",
+        "Pumpkin Butter",
+        "Frozen Pizza Margherita",
+        "Peach Salsa",
+        "Dijon Mustard",
+        "Pecan Pie",
+        "Peanut Butter Cups",
+        "Cold Brew Coffee Concentrate",
+        "Corn and Chili Tomatoless Salsa",
+        "Mango Sorbet",
+        "Grilled Chicken Strips",
+        "Gluten-Free Pasta",
+        "Mint Chip Ice Cream",
+        "Sourdough Bread",
+        "Cornbread Mix",
+        "Pita Bread",
+        "Salsa Verde",
+        "Peach Pear Flavored Sparkling Water",
+        "Beef Taquitos",
+        "Carrot Cake",
+        "Buttermilk Pancake Mix",
+        "Lemonade",
+        "Balsamic Vinegar",
+        "Honeycrisp Apple Cider",
+        "Organic Dark Chocolate",
+        "Baked Goods Mix (like muffins and scones)",
+        "Frozen Vegetable Medley",
+        "Green Tea",
+        "Lentil Soup",
+        "Coconut Milk Yogurt"
+    ];
+
+    function recommendProduct() {
+        const name = document.getElementById("nameInput").value.trim();
+        const age = document.getElementById("ageInput").value.trim();
+        const city = document.getElementById("cityInput").value.trim();
+
+        if (name === "" || age === "" || city === "") {
+            alert("Please enter your name, age, and city!");
+            return;
+        }
+
+        const randomProduct = products[Math.floor(Math.random() * products.length)];
+        document.getElementById("recommendation").innerHTML = `${name}, age ${age} from ${city}, we highly recommend you try the "${randomProduct}" from Trader Joe's!`;
+    }
+</script>
+
+</body>
+</html>
